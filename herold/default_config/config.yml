@@ -1,0 +1,9 @@
+releases:
+  release-tag-pattern: "^([0-9\\.]+)$"
+
+changelog:
+  sections:
+    "breaking-changes": "Breaking Changes"
+    "changes": "Changes"
+    "bug-fixes": "Bug Fixes"
+    "chores": "Chores"

@@ -33,5 +33,21 @@ test = [
 [tool.setuptools]
 include-package-data = true
 
+script-files = [
+  "bin/herold",
+]
+
 [tool.setuptools.packages.find]
 include = ["herold*"]
+
+[tool.setuptools.package-data]
+"herold.default_config" = ["**"]
+"herold.hooks" = ["**"]
+
+[tool.setuptools.exclude-package-data]
+"*" = [
+  ".*",
+  "~*",
+  "*.swp",
+  "*.pyc",
+]

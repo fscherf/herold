@@ -1,0 +1,9 @@
+meta:
+  flags: []
+
+  changelog:
+    revokes: []
+{% for section in config['changelog']['sections'].keys() %}
+    {{ section }}:
+      - ""
+{% endfor %}

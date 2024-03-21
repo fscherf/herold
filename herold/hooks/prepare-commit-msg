@@ -1,0 +1,12 @@
+#!/bin/sh
+
+COMMIT_MESSAGE_FILE=$1
+COMMIT_SOURCE=$2
+SHA1=$3
+
+which herold > /dev/null && {
+    herold patch-commit-message \
+        --commit-message-file="$COMMIT_MESSAGE_FILE" \
+        --commit-source="$COMMIT_SOURCE" \
+        --sha1="$SHA1"
+}

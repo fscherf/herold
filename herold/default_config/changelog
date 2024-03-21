@@ -1,0 +1,12 @@
+# Changelog
+{% for range in changelog['ranges'] %}
+## {{ range['name'] }}
+{% for section_name, section_verbose_name in changelog['sections'] -%}
+{% if section_name in range['entries'] %}
+### {{ section_verbose_name }}
+{%- for entry, commit_hash in range['entries'][section_name] %}
+- {{ entry }} ({{ commit_hash }})
+{%- endfor %}
+{% endif %}
+{%- endfor %}
+{%- endfor %}
